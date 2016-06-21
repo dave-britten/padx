@@ -46,13 +46,11 @@ for i in range(1, len(metal.contents), 2):
     loc_div = soup.find("div", id="location")
     dname = loc_div.contents[4].text
 
-
     time_re = re.search('(?P<hr>\d+)(?:\:(?P<mn>\d+))?\s(?P<t>[a|p]m)', timestr, re.IGNORECASE)
 
     hr = int(time_re.group('hr'))
     mn = int(time_re.group('mn')) if time_re.group('mn') else 0
     t = time_re.group('t')
-    #tm = time((hr + (12 if t == 'pm' and hr < 12 else 0)) % 24, mn)
     tm = time((hr % 12) + (0 if t == "am" else 12), mn)
 
     dt = datetime.combine(date.today(), tm)
