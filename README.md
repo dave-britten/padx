@@ -13,7 +13,7 @@ A simple screen-scaper for turning the list of guerilla dungeons on www.puzzledr
 
 Before initial usage, make sure you edit the script and change the values for 'group' and 'time_offset'.
 
-When that's done, simple execute padx.py to generate pad-a.ics (or pad-b.ics, pad-c.ics, etc. depending on group) in the current working directory. You may optionally specify an output file path as a single command line argument, e.g.:
+When that's done, simply execute padx.py to generate pad-a.ics (or pad-b.ics, pad-c.ics, etc. depending on group) in the current working directory. You may optionally specify an output file path as a single command line argument, e.g.:
 
     padx.py /var/www/html/pad-b.ics
 
