@@ -77,7 +77,7 @@ for i in range(1, len(metal.contents), 2):
     if time_offset:
         dt = dt + timedelta(hours=time_offset)
 
-    print("{0}, {1}".format(dname, dt))
+    #print("{0}, {1}".format(dname, dt))
 
     ics.write("BEGIN:VEVENT\n")
     ics.write("DTSTART:" + dt.strftime("%Y%m%dT%H%M%S") + "\n")
