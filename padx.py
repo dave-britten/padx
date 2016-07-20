@@ -63,6 +63,10 @@ for i in range(1, len(metal.contents), 2):
     #Parse the dungeon time. (Hours, optional :minutes, and am/pm)
     time_re = re.search('(?P<hr>\d+)(?:\:(?P<mn>\d+))?\s(?P<t>[a|p]m)', timestr, re.IGNORECASE)
 
+    #Time not found in the cell. Skip this dungeon.
+    if time_re == None:
+        continue
+
     hr = int(time_re.group('hr'))
     mn = int(time_re.group('mn')) if time_re.group('mn') else 0
     t = time_re.group('t')
